@@ -18,7 +18,6 @@ export default async function RootLayout({ children }) {
   const cookie = cookies().get("isDark");
   const boolean =
     cookie === undefined ? false : cookie.value === "true" ? true : false;
-  console.log("레이아웃쿠키 isDark?", boolean);
 
   return (
     <html lang="en">
