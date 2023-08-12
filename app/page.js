@@ -23,6 +23,7 @@ export default async function Home() {
             <span>Next.js</span>
             <span>mongoDB</span>
             <span>AWS S3</span>
+            <span>Tailwind Css</span>
           </details>
         </div>
       </div>

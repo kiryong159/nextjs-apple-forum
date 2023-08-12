@@ -4,6 +4,7 @@ import bcrypt from "bcrypt";
 export default async function JoinHandler(req, res) {
   const client = await connectDB;
   const db = client.db("forum");
+  req.body = JSON.parse(req.body);
 
   if (req.method === "POST") {
     if (
@@ -27,7 +28,7 @@ export default async function JoinHandler(req, res) {
       email: req.body.email,
       password: hashpassword,
     });
-    return res.redirect(302, "/");
+    return res.status(200).json("ok");
   }
   return res.status(500).json("req.method !== post");
 }
